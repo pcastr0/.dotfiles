@@ -1,0 +1,11 @@
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[user]
+	name = Patrick Castro
+	email = patrickp.castro@gmail.com
+[safe]
+	directory = /Users/patrickpaul.castro/redis-8.0.0/modules/redisearch/src
+	directory = /Users/patrickpaul.castro/redis/redis-8.0.0/modules/redisearch/src
