@@ -9,3 +9,5 @@
 [safe]
 	directory = /Users/patrickpaul.castro/redis-8.0.0/modules/redisearch/src
 	directory = /Users/patrickpaul.castro/redis/redis-8.0.0/modules/redisearch/src
+[pull]
+	rebase = true

@@ -103,8 +103,8 @@ export NVM_DIR="$HOME/.nvm"
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-alias ezshrc="nvim ~/.zshrc"
-alias szshrc="source ~/.zshrc"
+alias configshrc="nvim ~/.zshrc"
+alias sourceshrc="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 alias home="cd ~"
@@ -115,9 +115,9 @@ alias speedtest="speedtest-cli"
 
 alias lzg="lazygit"
 
-alias redis-server="~/redis/build_dir/bin/redis-server"
-alias redis-cli="~/redis/build_dir/bin/redis-cli"
-alias create-cluster="~/redis/redis-8.0.0/utils/create-cluster/create-cluster"
+alias redis-server="~/redis/bin/redis-server"
+alias redis-cli="~/redis/bin/redis-cli"
+alias redis-cluster="~/redis/redis-8.0.0/utils/create-cluster/create-cluster"
 alias flush-redis="redis-cli --cluster call 127.0.0.1:30001 FLUSHALL"
 
 
@@ -125,9 +125,9 @@ alias flush-redis="redis-cli --cluster call 127.0.0.1:30001 FLUSHALL"
 cd () {
     if command -v zoxide &>/dev/null; then
         # echo "Using zoxide for cd: $*"
-        z "$@" && ls -a || echo "Failed to change directory with zoxide"
+        z "$@" && ls -al || echo "Failed to change directory with zoxide"
     else
         # echo "Using builtin cd: $*"
-        builtin cd "$@" && ls -a || echo "Failed to change directory with builtin cd"
+        builtin cd "$@" && ls -al || echo "Failed to change directory with builtin cd"
     fi
 }
