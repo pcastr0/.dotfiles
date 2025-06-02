@@ -103,14 +103,16 @@ export NVM_DIR="$HOME/.nvm"
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-alias configshrc="nvim ~/.zshrc"
-alias sourceshrc="source ~/.zshrc"
+#
+alias ezshrc="nvim ~/.zshrc"
+alias ezshrc="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 alias home="cd ~"
 alias lsa="ls -la"
 
-alias trash="trash -v"
+alias="cd ~"
+alias rm="trash -v"
 alias speedtest="speedtest-cli"
 
 alias lzg="lazygit"
@@ -131,3 +133,4 @@ cd () {
         builtin cd "$@" && ls -al || echo "Failed to change directory with builtin cd"
     fi
 }
+
