@@ -142,7 +142,7 @@ alias flush-redis="redis-cli --cluster call 127.0.0.1:30001 FLUSHALL"
 
 # Automatically do an ls after each cd, z, or zoxide
 cd () {
-    if command -v zoxide &>/dev/null; then
+    if command -v z &>/dev/null; then
         # echo "Using zoxide for cd: $*"
         z "$@" && ls -al || echo "Failed to change directory with zoxide"
     else
