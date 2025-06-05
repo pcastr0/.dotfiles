@@ -151,3 +151,4 @@ cd () {
     fi
 }
 
+eval "$(/Users/patrickpaul.castro/.local/bin/mise activate zsh)"
