@@ -133,6 +133,7 @@ alias rm="trash -v"
 alias speedtest="speedtest-cli"
 
 alias lzg="lazygit"
+alias lzd='lazydocker'
 
 alias redis-server="~/redis/bin/redis-server"
 alias redis-cli="~/redis/bin/redis-cli"
@@ -141,14 +142,13 @@ alias flush-redis="redis-cli --cluster call 127.0.0.1:30001 FLUSHALL"
 
 
 # Automatically do an ls after each cd, z, or zoxide
-cd () {
-    if command -v z &>/dev/null; then
-        # echo "Using zoxide for cd: $*"
-        z "$@" && ls -al || echo "Failed to change directory with zoxide"
-    else
-        # echo "Using builtin cd: $*"
-        builtin cd "$@" && ls -al || echo "Failed to change directory with builtin cd"
-    fi
+cd ()
+{
+	if [ -n "$1" ]; then
+		builtin cd "$@" && ls -la
+	else
+		builtin cd ~ && ls -la
+	fi
 }
 
 eval "$(/Users/patrickpaul.castro/.local/bin/mise activate zsh)"
