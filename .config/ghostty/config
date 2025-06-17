@@ -44,7 +44,7 @@ window-decoration = none
 window-inherit-font-size = false
 font-family = "CaskaydiaMono Nerd Font Mono"
 font-size = 14
-# theme = Argonaut
+theme = tokyonight
 background-opacity = 0.98
 macos-option-as-alt = true
 keybind = alt+left=unbind
