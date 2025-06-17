@@ -43,9 +43,9 @@ shell-integration-features = sudo
 window-decoration = none
 window-inherit-font-size = false
 font-family = "CaskaydiaMono Nerd Font Mono"
-font-size = 14
+font-size = 16
 theme = tokyonight
-background-opacity = 0.98
+# background-opacity = 0.95
 macos-option-as-alt = true
 keybind = alt+left=unbind
 keybind = alt+right=unbind
