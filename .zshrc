@@ -13,9 +13,9 @@ plugins=(git zsh-syntax-highlighting you-should-use zsh-bat fzf-tab)
 
 fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 
-source $ZSH/oh-my-zsh.sh
-
 autoload -Uz compinit && compinit
+
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -54,8 +54,8 @@ bindkey '^[w' kill-region
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+# zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
